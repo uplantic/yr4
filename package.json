@@ -33,5 +33,8 @@
     "react-countdown": "^2.3.6",
     "react-dom": "^18.2.0",
     "tailwindcss": "^4.0.4"
+  },
+  "overrides": {
+    "@parcel/watcher": "2.1.0"
   }
 }
