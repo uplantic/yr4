@@ -1,74 +1,113 @@
 import React from "react";
 import Container from "../../common/Container";
+import { StaticImage } from "gatsby-plugin-image";
 
-const faqs = [
+const featuredPost = {
+  id: 1,
+  title: "We’re incredibly proud to announce we have secured $75m in Series B",
+  href: "#",
+  description:
+    "Libero neque aenean tincidunt nec consequat tempor. Viverra odio id velit adipiscing id. Nisi vestibulum orci eget bibendum dictum. Velit viverra posuere vulputate volutpat nunc. Nunc netus sit faucibus.",
+  date: "Mar 16, 2020",
+  datetime: "2020-03-16",
+  author: {
+    name: "Michael Foster",
+    href: "#",
+    imageUrl: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+  },
+};
+const posts = [
   {
-    question: "How do I know the tips are good?",
-    answer: "Our whole business depends on our tips being good, so it’s in our best interest that they are. The results of our customers speak for themselves, just trust us.",
+    id: 2,
+    title: "Boost your conversion rate",
+    href: "#",
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris incididunt.",
+    date: "Mar 10, 2020",
+    datetime: "2020-03-16",
+    author: {
+      name: "Lindsay Walton",
+      href: "#",
+      imageUrl: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
   },
   {
-    question: "Isn’t this insider trading?",
-    answer:
-      "Yes exactly. But at scale! Historically you could only make insider trades with knowledge from your direct network. Pocket brings you insider trading tips from people you don’t even know.",
+    id: 3,
+    title: "Boost your conversion rate",
+    href: "#",
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris incididunt.",
+    date: "Mar 10, 2020",
+    datetime: "2020-03-16",
+    author: {
+      name: "Lindsay Walton",
+      href: "#",
+      imageUrl: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
   },
   {
-    question: "But isn’t insider trading illegal?",
-    answer: "Here’s the thing: you’re the one doing the insider trading, not us. We’re just giving you the tips and some tools to make trades. We’re not doing anything wrong here.",
+    id: 4,
+    title: "Boost your conversion rate",
+    href: "#",
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris incididunt.",
+    date: "Mar 10, 2020",
+    datetime: "2020-03-16",
+    author: {
+      name: "Lindsay Walton",
+      href: "#",
+      imageUrl: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
   },
-  {
-    question: "Do the people giving you tips realize what they are doing?",
-    answer: "Again I would argue this isn’t really our responsibility. People make their own choices. If they don’t research the consequences that’s on them, not on us.",
-  },
-  {
-    question: "Where is Pocket based?",
-    answer: "Let’s just say it’s not somewhere where the SEC is going to find us.",
-  },
-  {
-    question: "Is there any age limit to trading on Pocket?",
-    answer:
-      "For our free plan, the age limit is based on the minimum age to trade in your country of residence. Our VIP plan uses advanced transaction anonymization though, so you can use that plan even if you’re 9 years old. Or a dog.",
-  },
-  {
-    question: "How did you get this on the App Store?",
-    answer: "Honestly we were surprised too, but eventually we found out that the app reviewer found the app so compelling they approved it just so they could use it themselves.",
-  },
-  {
-    question: "How do I explain the money I withdraw from Pocket to the IRS?",
-    answer: "This feels like one-hundred percent a you problem. Pocket is not responsible in any way for your tax returns.",
-  },
-  {
-    question: "How do I become an insider?",
-    answer:
-      "Contact us with some details about your industry and the type of access you have to apply for an insider account. Once approved, we’ll send you a guide on collecting insider information without being detected at work.",
-  },
+  // More posts...
 ];
 
 const LatestNews = () => {
   return (
-    <section id="latest" aria-labelledby="faqs-title" className="border-t border-gray-200 py-20 sm:py-32">
+    <section id="latest" aria-labelledby="faqs-title" className="py-20 sm:py-32">
       <Container>
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 id="faqs-title" className="text-3xl font-medium tracking-tight text-gray-900">
-            Frequently asked questions
-          </h2>
-          <p className="mt-2 text-lg text-gray-600">
-            If you have anything else you want to ask,{" "}
-            <a href="mailto:info@example.com" className="text-gray-900 underline">
-              reach out to us
-            </a>
-            .
-          </p>
-          <p className="mt-2 text-lg text-gray-600">
-            If you have anything else you want to ask,{" "}
-            <a href="mailto:info@example.com" className="text-gray-900 underline">
-              reach out to us
-            </a>
-            .
-          </p>
+        <div className="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row j">
+          <div className="w-full lg:max-w-lg lg:flex-auto">
+            <h2 className="text-4xl font-serif font-medium tracking-tight text-stone-100">
+              Latest Developments & Observations of <br />
+              Asteroid 2024 YR4.
+            </h2>
+            <p className="mt-6 text-lg text-stone-300">
+              Stay informed with breaking announcements, new data releases, and expert insights from NASA, ESA, and astronomers around the globe. Explore all the latest findings shaping our
+              understanding of Asteroid 2024 YR4.
+            </p>
+
+            <StaticImage alt="" src="../../../images/latest-news.png" className="mt-16 " />
+          </div>
+          <div className="w-full lg:max-w-xl lg:flex-auto">
+            <h3 className="sr-only">Blog Posts</h3>
+            <div className="mx-auto w-full max-w-2xl border-t border-gray-900/10 pt-12 sm:pt-16 lg:mx-0 lg:max-w-none lg:border-t-0 lg:pt-0">
+              <div className="-my-12 divide-y divide-gray-900/10">
+                {posts.map((post) => (
+                  <article key={post.id} className="py-12">
+                    <div className="group relative max-w-xl">
+                      <time dateTime={post.datetime} className="block text-sm/6 text-stone-400">
+                        {post.date}
+                      </time>
+                      <h2 className="mt-2 text-lg font-semibold text-stone-100 group-hover:text-stone-400">
+                        <a href={post.href}>
+                          <span className="absolute inset-0" />
+                          {post.title}
+                        </a>
+                      </h2>
+                      <p className="mt-4 text-sm/6 text-stone-200">{post.description}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+            <div className="mt-8 flex border-t border-gun-metal-3/60 pt-8">
+              <a href="#" className="text-sm/6 font-semibold text-gun-metal-2 hover:text-gun-metal-4">
+                View all News on Asteroid 2024 YR4 <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
         </div>
-        <ul role="list" className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:max-w-none lg:grid-cols-3">
-          <li>TEST</li>
-        </ul>
       </Container>
     </section>
   );

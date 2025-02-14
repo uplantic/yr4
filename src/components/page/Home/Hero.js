@@ -51,11 +51,13 @@ const HeroHome = () => {
             <div className="flex flex-col">
               <div>
                 <h1 className="text-4xl font-serif font-medium tracking-tight text-stone-100">Potential Earth Impact in 2032</h1>
-                <p className="mt-6 text-lg text-gray-300">For centuries, 2024 YR4 wandered unseen in the vast darkness of space, likely originating from the asteroid belt between Mars and Jupiter.</p>
-                <p className="mt-6 text-lg text-gray-300">
+                <p className="mt-6 text-lg text-stone-300">
+                  For centuries, 2024 YR4 wandered unseen in the vast darkness of space, likely originating from the asteroid belt between Mars and Jupiter.
+                </p>
+                <p className="mt-6 text-lg text-stone-300">
                   On December 27, 2024, astronomers in Chile spotted its silent approach—just two days after it had passed Earth at a distance twice that of the Moon.
                 </p>
-                <p className="mt-6 text-lg text-gray-300">
+                <p className="mt-6 text-lg text-stone-300">
                   But it’s coming back. On December 22, 2032, its path will bring it within 66,000 miles—close enough that its fate, and ours, remains uncertain. Will it pass us by, or will gravity
                   pull it onto a collision course? Every new observation brings us closer to the answer.
                 </p>
