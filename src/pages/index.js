@@ -1,13 +1,11 @@
 import * as React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import Countdown from "../components/common/Countdown.js";
 
 import Layout from "../components/layout.js";
 import HeroHome from "../components/page/Home/Hero.js";
 import LatestNews from "../components/page/Home/LatestNews.js";
-import ThreeScene from "../components/page/Home/ThreeScene.js";
 import SpinningGlobe from "../components/page/Home/SpinningGlobe.js";
-import SpinningAsteroid from "../components/page/Home/SpinningAsteroid.js";
+import FaqSection from "../components/page/Home/Faq.js";
 
 const IndexPage = () => (
   <Layout>
@@ -24,6 +22,7 @@ const IndexPage = () => (
     </div>
 
     <LatestNews />
+    <FaqSection />
   </Layout>
 );
 

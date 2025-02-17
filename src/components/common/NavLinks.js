@@ -9,7 +9,7 @@ export function NavLinks() {
 
   return [
     ["Home", "/"],
-    ["News", "/#reviews"],
+    ["News", "/news"],
     ["Shop", "/#shop"],
     ["FAQs", "/#faqs"],
   ].map(([label, href], index) => (

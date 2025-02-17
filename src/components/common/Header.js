@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { Link } from "gatsby";
 import { Popover, PopoverButton, PopoverBackdrop, PopoverPanel } from "@headlessui/react";
@@ -6,7 +7,6 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import { Button } from "./Button";
 import Container from "./Container";
-import { Logo } from "./Logo";
 import { NavLinks } from "./NavLinks";
 import { StaticImage } from "gatsby-plugin-image";
 
