@@ -40,7 +40,7 @@ const LatestNews = () => {
           <div className="w-full lg:max-w-xl lg:flex-auto">
             <h3 className="sr-only">Blog Posts</h3>
             <div className="mx-auto w-full max-w-2xl pt-12 sm:pt-16 lg:mx-0 lg:max-w-none lg:border-t-0 lg:pt-0">
-              <div className="-my-12 divide-y divide-stone-100/10">
+              <div className="-my-12 divide-y divide-stone-100/30">
                 {data.allMdx.nodes.map((node) => (
                   <article key={node.id} className="py-6">
                     <div className="group relative max-w-xl">

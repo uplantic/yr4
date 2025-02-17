@@ -36,8 +36,8 @@ function BackgroundIllustration(props) {
 
 function AsteroidImage() {
   return (
-    <div>
-      <StaticImage src="../../../images/asteroid-2024-YR4.png" alt="Asteroid 2024 YR4" className="animate-spin-very-slow" />
+    <div className="flex justify-center items-center w-full">
+      <StaticImage src="../../../images/asteroid-2024-YR4.png" alt="Asteroid 2024 YR4" className="animate-spin-very-slow w-72 h-72 sm:w-full sm:h-full" />
     </div>
   );
 }
@@ -50,7 +50,7 @@ const HeroHome = () => {
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
             <div className="flex flex-col">
               <div>
-                <h1 className="text-4xl font-serif font-medium tracking-tight text-stone-100">Potential Earth Impact in 2032</h1>
+                <h1 className="mt-10 sm:mt-0 text-4xl font-serif font-medium tracking-tight text-stone-100">Potential Earth Impact in 2032</h1>
                 <p className="mt-6 text-lg text-stone-300">
                   For centuries, 2024 YR4 wandered unseen in the vast darkness of space, likely originating from the asteroid belt between Mars and Jupiter.
                 </p>

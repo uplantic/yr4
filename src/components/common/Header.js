@@ -27,7 +27,7 @@ function ChevronUpIcon(props) {
 }
 
 function MobileNavLink(props) {
-  return <PopoverButton as={Link} className="block text-base/7 tracking-tight text-gray-700" {...props} />;
+  return <PopoverButton as={Link} className="block text-lg text-stone-100" {...props} />;
 }
 
 const Header = () => {
@@ -51,15 +51,22 @@ const Header = () => {
               {({ open }) => (
                 <>
                   <PopoverButton
-                    className="relative z-10 -m-2 inline-flex items-center rounded-lg stroke-gray-100 p-2 hover:bg-gray-200/50 hover:stroke-gray-600 focus:not-data-focus:outline-hidden active:stroke-gray-900"
+                    className="relative z-10 -m-2 inline-flex items-center rounded-lg stroke-stone-100 p-2 hover:bg-stone-200/50 hover:stroke-stone-300 focus:not-data-focus:outline-hidden active:stroke-gray-900"
                     aria-label="Toggle site navigation"
                   >
-                    {({ open }) => (open ? <ChevronUpIcon className="h-6 w-6 stroke-gray-900" /> : <MenuIcon className="h-6 w-6" />)}
+                    {({ open }) => (open ? <ChevronUpIcon className="h-6 w-6 stroke-stone-200" /> : <MenuIcon className="h-6 w-6" />)}
                   </PopoverButton>
                   <AnimatePresence initial={false}>
                     {open && (
                       <>
-                        <PopoverBackdrop static as={motion.div} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-0 bg-gray-300/60 backdrop-blur-sm" />
+                        <PopoverBackdrop
+                          static
+                          as={motion.div}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          className="fixed inset-0 z-0 bg-stone-200/60 backdrop-blur-sm"
+                        />
                         <PopoverPanel
                           static
                           as={motion.div}
@@ -70,17 +77,13 @@ const Header = () => {
                             y: -32,
                             transition: { duration: 0.2 },
                           }}
-                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pt-32 pb-6 shadow-2xl shadow-gray-900/20"
+                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-stone-800 px-6 pt-32 pb-6 shadow-2xl shadow-gray-900/20"
                         >
                           <div className="space-y-4">
-                            <MobileNavLink href="/#features">Features</MobileNavLink>
-                            <MobileNavLink href="/#reviews">Reviews</MobileNavLink>
-                            <MobileNavLink href="/#pricing">Pricing</MobileNavLink>
-                            <MobileNavLink href="/#faqs">FAQs</MobileNavLink>
-                          </div>
-                          <div className="mt-8 flex flex-col gap-4">
-                            <Button variant="outline">Log in</Button>
-                            <Button>Download the app</Button>
+                            <MobileNavLink to="/">Home</MobileNavLink>
+                            <MobileNavLink to="/news">News</MobileNavLink>
+                            <MobileNavLink to="/#shop">Shop</MobileNavLink>
+                            <MobileNavLink to="/#faqs">FAQs</MobileNavLink>
                           </div>
                         </PopoverPanel>
                       </>

@@ -16,7 +16,7 @@ const IndexPage = () => (
         <SpinningGlobe />
       </div>
       <div className="w-64 items-center mx-auto">
-        <h1 className="text-gun-metal font-display text-2xl md:text-8xl flex items-center justify-center gap-4">1.2%</h1>
+        <h1 className="text-gun-metal font-display text-6xl md:text-8xl flex items-center justify-center gap-4">1.2%</h1>
         <h3 className="text-gun-metal font-sans text-2xl mt-2 text-center">Impact Probability It Will Hit The Earth</h3>
       </div>
     </div>
