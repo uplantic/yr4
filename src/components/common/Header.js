@@ -82,7 +82,6 @@ const Header = () => {
                           <div className="space-y-4">
                             <MobileNavLink to="/">Home</MobileNavLink>
                             <MobileNavLink to="/news">News</MobileNavLink>
-                            <MobileNavLink to="/#shop">Shop</MobileNavLink>
                             <MobileNavLink to="/#faqs">FAQs</MobileNavLink>
                           </div>
                         </PopoverPanel>
